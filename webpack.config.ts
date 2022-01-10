@@ -1,5 +1,6 @@
 import { Configuration } from 'webpack'
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 const config: Configuration = {
   entry: './src/index.ts',
@@ -8,7 +9,10 @@ const config: Configuration = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true
+        }
       },
     ],
   },
@@ -18,7 +22,8 @@ const config: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Webpack Tinkering"
-    })
+    }),
+    new ForkTsCheckerWebpackPlugin()
   ]
 }
 
