@@ -1,7 +1,9 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+import { Configuration } from 'webpack'
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = {
+const config: Configuration = {
   entry: './src/index.ts',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -19,3 +21,5 @@ module.exports = {
     })
   ]
 }
+
+export default config
