@@ -4,7 +4,7 @@ import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 const config: Configuration = {
   entry: './src/index.ts',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -20,9 +20,7 @@ const config: Configuration = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: "Webpack Tinkering"
-    }),
+    new HtmlWebpackPlugin({ title: "Webpack Tinkering" }),
     new ForkTsCheckerWebpackPlugin()
   ]
 }
