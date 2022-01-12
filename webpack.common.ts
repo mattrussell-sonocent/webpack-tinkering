@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 const config: webpack.Configuration = {
   entry: './src/index.tsx',
@@ -21,7 +22,7 @@ const config: webpack.Configuration = {
       title: "Webpack Tinkering",
       template: 'index.html'
     }),
-    new ForkTsCheckerWebpackPlugin()
+    new ForkTsCheckerWebpackPlugin(),
   ]
 }
 
