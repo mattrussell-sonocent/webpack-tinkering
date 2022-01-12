@@ -4,7 +4,7 @@ import common from './webpack.common'
 
 const config: webpack.Configuration = merge(common, {
   mode: 'production',
-  devtool: 'source-map'
+  devtool: 'source-map',
 })
 
 export default config
