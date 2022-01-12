@@ -1,8 +1,8 @@
-import { Configuration } from 'webpack'
+import webpack from 'webpack'
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
-const config: Configuration = {
+const config: webpack.Configuration = {
   entry: './src/index.ts',
   devtool: 'source-map',
   module: {

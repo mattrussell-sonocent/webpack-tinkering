@@ -1,11 +1,11 @@
 import common from "./webpack.common"
-import { Configuration } from "webpack"
+import webpack from 'webpack'
 import { merge } from "webpack-merge"
 import 'webpack-dev-server'
 
-const config: Configuration = merge(common, {
+const config: webpack.Configuration = merge(common, {
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-source-map',
   devServer: {
     static: './dist'
   }

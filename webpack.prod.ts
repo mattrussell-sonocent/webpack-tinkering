@@ -1,8 +1,8 @@
-import { Configuration } from 'webpack'
+import webpack from 'webpack'
 import { merge } from 'webpack-merge'
 import common from './webpack.common'
 
-const config: Configuration = merge(common, {
+const config: webpack.Configuration = merge(common, {
   mode: 'production',
   devtool: 'source-map'
 })
