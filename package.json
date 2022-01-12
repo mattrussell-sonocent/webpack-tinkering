@@ -10,8 +10,11 @@
     "@babel/plugin-proposal-class-properties": "7.16.7",
     "@babel/plugin-proposal-object-rest-spread": "7.16.7",
     "@babel/preset-env": "7.16.8",
+    "@babel/preset-react": "7.16.7",
     "@babel/preset-typescript": "7.16.7",
     "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "@types/react-dom": "17.0.11",
     "@types/webpack": "5.28.0",
     "babel-loader": "8.2.3",
     "fork-ts-checker-webpack-plugin": "6.5.0",
@@ -22,5 +25,9 @@
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.7.3",
     "webpack-merge": "5.8.0"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   }
 }
