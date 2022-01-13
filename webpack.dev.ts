@@ -20,6 +20,7 @@ const config: webpack.Configuration = merge(commonConfig, {
             test: /\.module\.s[ac]ss$/,
             use: [
               'style-loader',
+              'css-modules-typescript-loader',
               {
                 loader: 'css-loader',
                 options: {
