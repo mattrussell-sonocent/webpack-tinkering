@@ -2,7 +2,7 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
-const config: webpack.Configuration = {
+export const commonConfig: webpack.Configuration = {
   entry: './src/index.tsx',
   devtool: 'source-map',
   module: {
@@ -24,5 +24,3 @@ const config: webpack.Configuration = {
     new ForkTsCheckerWebpackPlugin(),
   ],
 }
-
-export default config

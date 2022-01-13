@@ -1,11 +1,9 @@
 import React from 'react'
-import StatefulButton from './StatefulButton'
+import { StatefulButton } from './StatefulButton'
 
-const App = () => (
-  <>
-    <h1>React Refresh!!</h1>
+export const App = () => (
+  <React.StrictMode>
+    <h1>Penguin Breeder</h1>
     <StatefulButton />
-  </>
+  </React.StrictMode>
 )
-
-export default App
