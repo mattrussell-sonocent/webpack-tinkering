@@ -4,7 +4,7 @@ import styles from './StatefulButton.module.sass'
 export const StatefulButton = () => {
   const [state, setState] = useState('🐧')
   return (
-    <button className={styles.red} onClick={() => setState((s) => s + '🐧')}>
+    <button className={styles.statefulButton} onClick={() => setState((s) => s + '🐧')}>
       {state}
     </button>
   )
