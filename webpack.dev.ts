@@ -14,14 +14,30 @@ const config: webpack.Configuration = merge(commonConfig, {
   module: {
     rules: [
       {
-        test: /\.(s[ac]ss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.s[ac]ss$/,
+        oneOf: [
+          {
+            test: /\.module\.s[ac]ss$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: {
+                    localIdentName: '[local]--[hash:base64:5]',
+                  },
+                },
+              },
+              'sass-loader',
+            ],
+          },
+          {
+            use: ['style-loader', 'css-loader', 'sass-loader'],
+          },
+        ],
       },
     ],
   },
 })
-
-console.log('Dev config')
-console.log(config)
 
 export default config

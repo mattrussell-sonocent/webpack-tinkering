@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
-import './StatefulButton.sass'
+import styles from './StatefulButton.module.sass'
 
 export const StatefulButton = () => {
   const [state, setState] = useState('🐧')
-  return <button onClick={() => setState((s) => s + '🐧')}>{state}</button>
+  return (
+    <button className={styles.red} onClick={() => setState((s) => s + '🐧')}>
+      {state}
+    </button>
+  )
 }

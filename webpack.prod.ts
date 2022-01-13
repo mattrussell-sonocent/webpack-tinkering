@@ -9,12 +9,32 @@ const config: webpack.Configuration = merge(commonConfig, {
   module: {
     rules: [
       {
-        test: /\.(s[ac]ss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        test: /\.s[ac]ss$/,
+        oneOf: [
+          {
+            test: /\.module\.s[ac]ss$/,
+            use: [
+              MiniCssExtractPlugin.loader,
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: {
+                    localIdentName: '[local]--[hash:base64:5]',
+                  },
+                },
+              },
+              'sass-loader',
+            ],
+          },
+          {
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+          },
+        ],
       },
     ],
   },
   plugins: [new MiniCssExtractPlugin()],
 })
 
+// noinspection JSUnusedGlobalSymbols
 export default config
