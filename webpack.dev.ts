@@ -11,6 +11,14 @@ const config: webpack.Configuration = merge(commonConfig, {
     static: './dist',
   },
   plugins: [new ReactRefreshWebpackPlugin()],
+  module: {
+    rules: [
+      {
+        test: /\.(s[ac]ss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+  },
 })
 
 console.log('Dev config')
