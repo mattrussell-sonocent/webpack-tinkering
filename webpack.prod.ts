@@ -2,6 +2,7 @@ import webpack from 'webpack'
 import { merge } from 'webpack-merge'
 import { commonConfig } from './webpack.common'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 const config: webpack.Configuration = merge(commonConfig, {
   mode: 'production',
@@ -34,7 +35,10 @@ const config: webpack.Configuration = merge(commonConfig, {
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [new MiniCssExtractPlugin({ filename: 'static/css/[name].[contenthash:8].css' }), new CleanWebpackPlugin()],
+  output: {
+    filename: 'static/js/[name].[contenthash:8].js',
+  },
 })
 
 // noinspection JSUnusedGlobalSymbols
