@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatefulButton } from './StatefulButton'
+import { StatefulButton } from './StatefulButton/StatefulButton'
 
 export const App = () => (
   <React.StrictMode>
