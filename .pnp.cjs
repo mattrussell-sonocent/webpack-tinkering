@@ -60,6 +60,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-webpack-plugin", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:3.1.1"],
             ["fork-ts-checker-webpack-plugin", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:6.5.0"],
             ["html-webpack-plugin", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:5.5.0"],
+            ["identity-obj-proxy", "npm:3.0.0"],
             ["jest", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:27.4.7"],
             ["mini-css-extract-plugin", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:2.4.7"],
             ["prettier", "npm:2.5.1"],
@@ -7061,6 +7062,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["harmony-reflect", [
+        ["npm:1.6.2", {
+          "packageLocation": "./.yarn/cache/harmony-reflect-npm-1.6.2-47a9f53361-2e5bae414c.zip/node_modules/harmony-reflect/",
+          "packageDependencies": [
+            ["harmony-reflect", "npm:1.6.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["has", [
         ["npm:1.0.3", {
           "packageLocation": "./.yarn/cache/has-npm-1.0.3-b7f00631c1-b9ad53d53b.zip/node_modules/has/",
@@ -7386,6 +7396,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/postcss",
             "postcss"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["identity-obj-proxy", [
+        ["npm:3.0.0", {
+          "packageLocation": "./.yarn/cache/identity-obj-proxy-npm-3.0.0-080ab9ac1e-97559f8ea2.zip/node_modules/identity-obj-proxy/",
+          "packageDependencies": [
+            ["identity-obj-proxy", "npm:3.0.0"],
+            ["harmony-reflect", "npm:1.6.2"]
           ],
           "linkType": "HARD",
         }]
@@ -12158,6 +12178,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-webpack-plugin", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:3.1.1"],
             ["fork-ts-checker-webpack-plugin", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:6.5.0"],
             ["html-webpack-plugin", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:5.5.0"],
+            ["identity-obj-proxy", "npm:3.0.0"],
             ["jest", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:27.4.7"],
             ["mini-css-extract-plugin", "virtual:b8110c2a9eddf2831a0baad3e20069d77855a01cded687554068830eefc93d003dc461f46612004137bb889c96af7c662ed71c6f0f1e6867c9c3885196bbbc28#npm:2.4.7"],
             ["prettier", "npm:2.5.1"],
